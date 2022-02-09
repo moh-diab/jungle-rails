@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
-ruby "2.3.5"
+ruby "2.6.6"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.11'
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 0.10'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -41,9 +41,14 @@ gem 'faker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'rspec-rails', '~> 3.5'
   gem 'byebug'
   gem 'quiet_assets'
   gem 'dotenv-rails'
+
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
 end
 
 group :development do
